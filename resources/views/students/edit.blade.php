@@ -3,7 +3,7 @@
  
 <div class="card">
   <div class="card-header">Edit Page</div>
-  <div class="card-body">q
+  <div class="card-body">
       
       <form action="{{ url('students/' .$students->id) }}" method="post">
         {!! csrf_field() !!}

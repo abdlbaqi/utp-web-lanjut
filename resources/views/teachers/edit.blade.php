@@ -3,8 +3,8 @@
  
 <div class="card">
   <div class="card-header">Edit Page</div>
-  <div class="card-body">q
-      
+  <div class="card-body">
+    
       <form action="{{ url('teachers/' .$teachers->id) }}" method="post">
         {!! csrf_field() !!}
         @method("PATCH")
