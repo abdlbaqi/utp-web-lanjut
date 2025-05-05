@@ -44,7 +44,8 @@ class StudentController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $student = Student::find($id);
+        return view('students.show')->with('students', $student);
     }
 
     /**
@@ -52,15 +53,19 @@ class StudentController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $student = Student::find($id);
+        return view('students.edit')->with('students', $student);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id):RedirectResponse
     {
-        //
+        $student = Student::find($id);
+        $input = $request->all();
+        $student->update($input);
+        return redirect('students')->with('flash_message', 'student Updated!'); 
     }
 
     /**
@@ -68,6 +73,7 @@ class StudentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Student::destroy($id);
+        return redirect('students')->with('flash_message', 'Student deleted!'); 
     }
 }
