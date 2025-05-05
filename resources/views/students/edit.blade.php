@@ -2,8 +2,8 @@
 @section('content')
  
 <div class="card">
-  <div class="card-header">Contactus Page</div>
-  <div class="card-body">
+  <div class="card-header">Edit Page</div>
+  <div class="card-body">q
       
       <form action="{{ url('students/' .$students->id) }}" method="post">
         {!! csrf_field() !!}
