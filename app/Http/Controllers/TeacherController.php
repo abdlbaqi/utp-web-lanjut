@@ -9,7 +9,7 @@ use App\Models\Teacher;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
-class teacherController extends Controller
+class TeacherController extends Controller
 {
     /**
      * Display a listing of the resource.
